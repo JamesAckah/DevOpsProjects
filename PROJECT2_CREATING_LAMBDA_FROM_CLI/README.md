@@ -2,7 +2,8 @@
 
 This hands-on walks you through the creation of lambda function and creating versions and alias for your lambda function in CLI from EC2 instance.
 
-<u>**What is Lambda?**</u>
+**<u>What is Lambda?</u>**
+
 AWS Lambda service allows you to run code without provisioning or managing dedicated servers. In other words, Lambda will be called Serverless Computing.
 
 The interesting feature about lambda is you only need to pay for the compute time you consume, and no need to pay when your code is not running.
