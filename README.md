@@ -38,54 +38,43 @@ Lab Outline:
 5.  Executing AWS CLI Commands.
 6.  Check and validate the EC2 Instance.
 7.  Terminate the EC2 Instance.
+
 STEP 1: LOG IN TO THE AWS MANAGEMENT CONSOLE
 
 1.  Open AWS Console: Go to the  AWS Management Console.
 2.  Sign In: Use your credentials to log in.
+   ![image](https://github.com/user-attachments/assets/c862c89e-935e-448e-85db-edbe02fddba3)
 
 
 It is always advisable to Sign in with an IAM credential rather than as a root user. Using the IAM Credential instead of the root user enhances security by limiting access, enabling better control and monitoring, and reducing the risk of accidental or malicious actions in your AWS account.
 
 3.  Select Region: Once logged  in, ensure your default region  is  US East (N.
 Virginia), which is represented by us-east-1. You can set this in the top right corner of the console.
+![image](https://github.com/user-attachments/assets/084e8d0d-ae5e-4c35-94eb-6bd1ee105dd8)
+
 STEP 2: CREATE AN IAM ROLE
 
 1.  Go to the AWS Management Console.
-2.  In the top-left menu go to Services, > Security, Identity & Compliance, and Select
-IAM.
+2.  In the top-left menu go to Services, > Security, Identity & Compliance, and Select IAM.
+ ![image](https://github.com/user-attachments/assets/625020ef-c8fc-42b5-9d7f-00ba95bce0fd)
 3.  In the IAM dashboard on the left menu click on roles.
 4.  Click on Create Roles in the right top corner.
-
+![image](https://github.com/user-attachments/assets/f693dbfd-4d2b-4bc9-92b4-98d45b729096)
 
 5.  In the trusted entity type select AWS Service.
-
-
+![image](https://github.com/user-attachments/assets/96cf75f9-ffd1-481a-a4ad-50442f5231df)
 
 6.  In the server or use case select EC2 and click on next
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/ff55d3fd-a6a2-4a87-b9c1-0277066339c7)
 
 7.  In the add permission page select EC2FullAccess by typing it in the search bar and click next.
-
+![image](https://github.com/user-attachments/assets/4e6658ee-fa87-467e-a1a4-40b7ea7d3597)
 
 8.  In the name and review page type the name of the role and click on create role.
+   ![image](https://github.com/user-attachments/assets/ba9af271-9a5b-4383-ba1c-bab75e1f16b3)
+
+
 STEP 3: LAUNCH AN EC2 INSTANCE
 
 1.  In  the AWS  Management  Console,  from  the  top-left  menu,  go  to  Services, Computer and EC2.
