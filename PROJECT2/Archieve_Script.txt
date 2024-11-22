@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Configuration
+SCAN_DIR="/var/log"
+ARCHIVES_DIR="${SCAN_DIR}/archives"
+S3_BUCKET="s3://your-s3-bucket-name"
+LOG_FILE="/var/log/archive_cleanup.log"
+RETENTION_DAYS=90
+
+# Ensure script is run as root
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root or with sudo privileges." | tee -a "$LOG_FILE"
+    exit 1
+fi
+
+# Function to log messages
+log_message() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
+}
+
+# Create the archives folder if it doesn't exist
+if [[ ! -d "$ARCHIVES_DIR" ]]; then
+    mkdir -p "$ARCHIVES_DIR"
+    log_message "Created archive directory: $ARCHIVES_DIR"
+fi
+
+# Find files not accessed in the last 90 days and move them to the archive folder
+log_message "Starting the cleanup process for directory: $SCAN_DIR"
+find "$SCAN_DIR" -type f -not -name "*.sh" -atime +"$RETENTION_DAYS" -exec mv {} "$ARCHIVES_DIR/" \; 2>>"$LOG_FILE"
+
+if [[ $? -eq 0 ]]; then
+    log_message "Files older than $RETENTION_DAYS days have been moved to $ARCHIVES_DIR."
+else
+    log_message "Error occurred while moving files. Check the log file for details."
+    exit 1
+fi
+
+# Sync the archives folder to S3
+log_message "Starting S3 upload to bucket: $S3_BUCKET"
+aws s3 sync "$ARCHIVES_DIR/" "$S3_BUCKET" --delete 2>>"$LOG_FILE"
+
+if [[ $? -eq 0 ]]; then
+    log_message "Successfully uploaded archive files to $S3_BUCKET."
+    # Optionally delete local files after successful sync
+    rm -rf "$ARCHIVES_DIR"/*
+    log_message "Local archive folder cleaned up after successful upload."
+else
+    log_message "Failed to upload archive files to S3. Check the log file for details."
+    exit 1
+fi
+
+log_message "Cleanup process completed successfully."
+
+exit 0
