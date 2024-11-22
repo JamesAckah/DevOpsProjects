@@ -144,7 +144,8 @@ You’ve successfully set up user authentication using AWS Cognito.
 
 #AWS #Cognito #WebDevelopment #CloudSecurity #AmplifyDeployment
 
-Written by: James Ackah-Blay 
+Written by: James Ackah-Blay
+
 Connect with me on LinkedIn Profile: https://www.linkedin.com/in/jamesackahblay/
 
 
