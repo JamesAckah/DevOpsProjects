@@ -1,0 +1,6 @@
+set from ="example@gmail.com"
+set realname="System_Backup"
+set smtp_url="smtp://example@gmail.com@smtp.gmail.com:465/"
+set smtp_pass="bqwi ekzn twgz hcwg"
+set smtp_starttls="yes"
+set ssl_force_tls="yes"

@@ -55,3 +55,5 @@ You can update an alias to point to a new version of the function that is pointi
 8. Creation and Deletion of Lambda Alias
 9. Validation of the Lab
 10. Deleting Lambda Function
+
+
