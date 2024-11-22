@@ -290,36 +290,3 @@ If you ever need to delete an alias or function, here are the commands:
 By following these steps, you've successfully created a Lambda function, managed its versions, and used aliases to simplify deployment. AWS Lambda versioning and aliasing are crucial for maintaining serverless applications efficiently, and using the CLI makes it easy to automate. If you're just starting with AWS Lambda, don’t be afraid to experiment. Check out the official AWS documentation for more in-depth details https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6.	
-
-
-
-
-
-
-9.	
-    
-
-
-
