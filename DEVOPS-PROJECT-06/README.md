@@ -81,7 +81,7 @@ Add the following text in the editor:
 <h1> Hi this is the index page for ecgapp website <h1>
 
 Remember to save and close each file by CTRL+X and Y, then press enter.
-
+```
 **STEP 8: Create Virtual Host Files**
 	``` bash
 # 1st website 
