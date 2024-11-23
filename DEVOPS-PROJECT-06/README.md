@@ -83,7 +83,7 @@ Remember to save and close each file by CTRL+X and Y, then press enter.
 
 **STEP 8: Create Virtual Host Files**
 	``` bash
-	# 1st website 
+# 1st website 
        Create a file for redpot:
        
        sudo nano /etc/apache2/sites-available/redpot.com.conf
@@ -100,7 +100,7 @@ Remember to save and close each file by CTRL+X and Y, then press enter.
        </VirtualHost>
 
 
-	# 2nd website 
+# 2nd website 
        Create a file for ecgapp:
        
        sudo nano /etc/apache2/sites-available/ecgapp.com.conf
@@ -116,15 +116,17 @@ Remember to save and close each file by CTRL+X and Y, then press enter.
            CustomLog ${APACHE_LOG_DIR}/site1.example.com_access.log combined
        </VirtualHost>
 ```
+bash
+```
 # Explanation of the above code: 
 
 ServerAdmin: Specify the email address of the website administrator.
 DocumentRoot: Define the directory where the website files are stored.
 ServerName: Specify the domain name of your website.
 ServerAlias: Add any additional domain names (if applicable) that should point to this website.
-ErrorLog and CustomLog: Configure the log file paths for error logging and access logging.
+ErrorLog and CustomLog: Configure the log file paths for error and access logging.
 
-**STEP 9 : Enable Sites and Restart Apache:**
+**STEP 9: Enable Sites and Restart Apache:**
       
        sudo a2ensite redpot.com.conf
        sudo a2ensite ecgapp.com.conf
@@ -146,4 +148,15 @@ To point your domain names to your EC2 instance, update your DNS records:
         ◦ Open your browser and navigate to http://redpot.com and http://ecgapp.com to ensure both sites are 	
         loading correctly.
 
-An inexpensive and efficient solution to handle several online properties is to host multiple websites on a single Amazon EC2 server. With the right setup—which includes configuring the web server, establishing virtual hosts, and putting robust security measures in place—you can create a fast and scalable hosting environment. The methods outlined in this article might help you get your Amazon EC2 instance ready to host multiple websites. Ensuring a seamless and secure online presence for your different web apps is guaranteed.
+# Redpot site working 
+
+ ![redpot](https://github.com/user-attachments/assets/ad26606b-03be-42dd-8e69-995679dccf54)
+
+# Ecgapp working
+
+ ![ecgapp](https://github.com/user-attachments/assets/edbd174e-5273-441c-8e6c-e1cc12375bd8)
+
+
+# Conclusion 
+
+An inexpensive and efficient solution to handle several online properties is to host multiple websites on a single Amazon EC2 server. With the right setup—which includes configuring the web server, establishing virtual hosts, and putting robust security measures in place—you can create a fast and scalable hosting environment. The methods outlined in this article might help you get your Amazon EC2 instance ready to host multiple websites. Ensuring a seamless and secure online presence for your different web apps is guaranteed which will save cost. 
