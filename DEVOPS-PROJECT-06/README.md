@@ -63,7 +63,8 @@ a browser requests them.
 sudo chmod -R 755 /var/www
 
 **STEP 7: Create a simple web page for both domains**
-
+bash 
+```
 We have now set up our files and directory structure properly. Using any file editor like Vim or Nano, create a simple index.html file for each website.
 
 sudo nano /var/www/redpot/index.html
