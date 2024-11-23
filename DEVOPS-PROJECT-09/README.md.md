@@ -55,8 +55,6 @@ Note: AWS Lambda and Amazon ECS do not support in-place deployments.
 12.	Cleanup Resources.
  
 
----
-
 ## Step-by-Step Instructions
 
 ### 1. Sign in to the AWS Management Console
@@ -67,8 +65,6 @@ Note: AWS Lambda and Amazon ECS do not support in-place deployments.
 
    ![image](https://github.com/user-attachments/assets/d514199e-073d-4afb-9c59-609d9eb4e87a)
 
-
----
 
 ### 2. Create an IAM Role
 1. Navigate to **Services > Security, Identity & Compliance > IAM**.
@@ -90,9 +86,6 @@ Note: AWS Lambda and Amazon ECS do not support in-place deployments.
 5. Name the role (e.g., `EC2RoleforCodeDeploy`) and create it.
 
    ![image](https://github.com/user-attachments/assets/ccd45fbe-117e-4060-bb14-32b43f277d50)
-
-
----
 
 ### 3. Launch an EC2 Instance
 1. Go to **Services > Compute > EC2**.
@@ -136,7 +129,6 @@ Creating a VPC and subnet is essential when deploying an application on an EC2 i
 ![image](https://github.com/user-attachments/assets/079eed94-65a6-4067-b4d1-5ad71aba3af1)
 
 4.	Keep the remaining Default settings and Click the Launch Instance Button.
----
 
 ### 4. Clone the WordPress Files
 1. Open **CloudShell** in the AWS Console.
@@ -144,7 +136,7 @@ Creating a VPC and subnet is essential when deploying an application on an EC2 i
    ![image](https://github.com/user-attachments/assets/abe6fdfa-52d5-4fdf-a51e-5adb9fd4535b)
 
 2. Run the following commands:
-   ```bash
+   
    wget https://github.com/WordPress/WordPress/archive/master.zip
 
    ![image](https://github.com/user-attachments/assets/aca6ac9f-546a-47e4-bd3e-e472b774c9ff)
@@ -167,7 +159,6 @@ Creating a VPC and subnet is essential when deploying an application on an EC2 i
 	 rm -rf /tmp/WordPress_Temp
 	 rm -f master.zip
 
-   ```
 ### TASK 5: CONNECT TO YOUR EC2 INSTANCE VIA SSH:
 1.	To connect to your instance using the SSH client, click on this link https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
 
@@ -426,7 +417,3 @@ After you are done with the lab, you may delete the EC2 and the application in C
 
 
       ![image](https://github.com/user-attachments/assets/0152f805-2a86-4f14-979e-a02c15935246)
-
-
-
----
