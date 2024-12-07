@@ -1,0 +1,85 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - master  # Adjust branch name as needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # Required to generate OIDC token
+      contents: read   # Required to read repo contents
+
+    steps:
+
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Configure AWS Credentials
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::202533534284:role/awsGitHubActionsprafulswebAppRole
+          aws-region: us-east-1
+
+      # Step 3: Install Python 3.8
+      - name: Install Python 3.8
+        run: |
+          sudo apt-get update
+          sudo add-apt-repository ppa:deadsnakes/ppa -y  # Add repository for older Python versions
+          sudo apt-get update
+          sudo apt-get install -y python3.8 python3.8-distutils python3-pip
+          python3.8 --version
+
+      # Step 4: Set Python 3.8 as Default
+      - name: Set Python 3.8 as Default
+        run: |
+          sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+          sudo update-alternatives --set python /usr/bin/python3.8
+          python --version
+
+      # Step 5: Install SAM CLI
+      - name: Install SAM CLI
+        run: |
+          pip3 install aws-sam-cli
+          sam --version  # Verify installation
+
+      # Step 6: Build the SAM application
+      - name: Build SAM Application
+        env:
+          SAM_CLI_TELEMETRY: 0  # Disable telemetry to avoid unnecessary warnings
+          PYTHONPATH: /usr/bin/python3.8
+        run: |
+          sam build --template-file prafuls-webapp/template.yaml --build-dir .aws-sam/build
+
+      # Step 7: Deploy SAM application
+      - name: Deploy SAM Application
+        run: |
+          sam deploy --template-file .aws-sam/build/template.yaml \
+                     --stack-name prafuls-serverless-app \
+                     --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM \
+                     --no-confirm-changeset --region us-east-1 \
+                     --resolve-s3  # Automatically create a managed bucket
+                     --disable-rollback
+
+      # Step 8: Fetch S3 Bucket Name from CloudFormation Outputs
+      - name: Fetch S3 Bucket Name
+        id: fetch-s3-bucket
+        run: |
+          S3_BUCKET=$(aws cloudformation describe-stacks \
+            --stack-name prafuls-serverles-app \
+            --query "Stacks[0].Outputs[?OutputKey=='StaticWebsiteBucketName'].OutputValue" \
+            --output text)
+          echo "S3_BUCKET=$S3_BUCKET" >> $GITHUB_ENV
+
+      # Step 9: Upload Static Site to S3
+      - name: Upload Static Site to S3
+        run: |
+          if [ -z "$S3_BUCKET" ]; then
+            echo "Error: S3_BUCKET is not set. Ensure your CloudFormation stack has been deployed.";
+            exit 1;
+          fi
+          aws s3 sync static-site s3://$S3_BUCKET --delete

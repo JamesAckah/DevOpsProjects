@@ -1,0 +1,1866 @@
+this is my full CSS codes place the modified into its respective position. 
+
+/**
+* Template Name: iPortfolio - v3.5.0
+* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+}
+
+a {
+  color: #149ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #37b3ed;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #272829;
+  padding-right: 20px; /* Add this line */
+  box-sizing: border-box; /* Add this line */
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #149ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #2eafec;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: #040b14;
+  overflow: hidden;
+  height: auto;
+}
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+#header .profile h1 a, #header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+#main {
+  margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+.nav-menu a, .nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+.nav-menu a i, .nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
+  color: #149ddd;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+  height: auto;
+}
+.mobile-nav-active #header {
+  left: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") top center;
+  background-size: cover;
+}
+#hero:before {
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+#hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 20;
+  overflow: hidden;
+  height: auto;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+.section-title p {
+  margin-bottom: 0;
+}
+
+
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.about .content ul strong {
+  margin-right: 10px;
+}
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+.facts {
+  padding-bottom: 30px;
+}
+.facts .count-box {
+  padding: 30px;
+  width: 100%;
+}
+.facts .count-box i {
+  display: block;
+  font-size: 44px;
+  color: #149ddd;
+  float: left;
+  line-height: 0;
+}
+.facts .count-box span {
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  color: #050d18;
+  margin-left: 60px;
+}
+.facts .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #122f57;
+}
+.facts .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #122f57;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+.facts .count-box a:hover {
+  color: #1f5297;
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 2;
+}
+.skills .progress .skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  font-size:small;
+}
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+  font-size: small;
+}
+.skills .progress-bar-wrap {
+  background: #dce8f8;
+  height: 15px;
+}
+.skills .progress-bar {
+  width: 2px;
+  height: 15px;
+  transition: 0.9s;
+  background-color: #149ddd;
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+.resume .resume-item h5 {
+  font-size: 18px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  color: #149ddd;
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  
+  overflow: hidden;
+  height: auto;
+  z-index: 1;
+}
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 1;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  justify-content: center;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  background: rgba(20, 157, 221, 0.75);
+  transition: 0.3s;
+  width: 50%;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  background: rgba(20, 157, 221, 0.95);
+}
+.portfolio .portfolio-wrap .portfolio-links a + a {
+  border-left: 1px solid #37b3ed;
+}
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #149ddd;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #149ddd;
+}
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Services
+
+.services .icon-box {
+  margin-bottom: 20px;
+}
+.services .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #149ddd;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #149ddd;
+}
+.services .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+.services .icon-box:hover .icon i {
+  color: #149ddd;
+}
+.services .title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.services .title a {
+  color: #343a40;
+}
+.services .title a:hover {
+  color: #149ddd;
+}
+.services .description {
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Testimonials
+
+.testimonials .testimonials-carousel, .testimonials .testimonials-slider {
+  overflow: hidden;
+  height: auto;
+}
+.testimonials .testimonial-item {
+  box-sizing: content-box;
+  text-align: center;
+  min-height: 320px;
+}
+.testimonials .testimonial-item .testimonial-img {
+  width: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.testimonials .testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+  color: #c3e8fa;
+  font-size: 26px;
+}
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 15px 15px 15px;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  margin-bottom: 35px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.testimonials .testimonial-item p::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid #fff;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 20px);
+}
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #149ddd;
+}
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #149ddd;
+}
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+  padding-bottom: 130px;
+}
+.contact .info {
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+.contact .info i {
+  font-size: 20px;
+  color: #149ddd;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #dff3fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #050d18;
+}
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #173b6c;
+}
+.contact .info .email p {
+  padding-top: 5px;
+}
+.contact .info .social-links {
+  padding-left: 60px;
+}
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+.contact .info .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+}
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+  background: #149ddd;
+  color: #fff;
+}
+.contact .php-email-form {
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form .form-group {
+  margin-bottom: 15px;
+}
+.contact .php-email-form label {
+  padding-bottom: 8px;
+}
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+.contact .php-email-form input {
+  height: 44px;
+}
+.contact .php-email-form textarea {
+  padding: 10px 15px;
+}
+.contact .php-email-form button[type=submit] {
+  background: #149ddd;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.contact .php-email-form button[type=submit]:hover {
+  background: #37b3ed;
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 20px 0;
+  background: #f9f9f9;
+}
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #0e2442;
+  content: "/";
+}
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background: #040b14;
+}
+#footer .copyright {
+  text-align: center;
+}
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
+.container h2 {
+  display: flex;
+  justify-content: space-between; /* Align the text and button horizontally */
+  align-items: center; /* Align vertically */
+  font-size: 24px;
+  font-weight: bold; /* Makes the "About" text bold */
+  color: #003366; /* Dark blue color */
+}
+
+.container h2 .btn {
+  padding: 10px 20px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.container h2 .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+<!-- The HTML Code-->
+
+<!-----------index.php-------->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MyPortfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo new.gif" rel="icon">
+  <link href="assets/img/logo new.gif" rel="logo">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/prof-img.png" alt="" class="img-fluid rounded-circle">
+         <h1 class="text-light"><a href="index.html">James Ackah-Blay</a></h1>
+         <center><h5 class="text-light"><a href="index.html"></a>Email:jamesblay80@gmail.com</h5></center>
+         <center><h5 class="text-light"><a href="index.html"></a>Location: Ghana - West Africa</h5></center>
+        
+        <div class="social-links mt-3 text-center">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>      
+          <!--<a> href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+          <a href="https://github.com/DalijayTechHub/Developer-Associate-Projects" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://www.youtube.com/@prafulpatel16" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
+          <a href="https://www.linkedin.com/in/jamesackahblay" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="http://www.dalijaytechhub.online" target="_blank" class="website"><i class="bx bx-globe"></i></a>
+          <div class="row">
+          
+          </div>
+          </div>
+  
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>James Ackah-Blay</h1>
+      <p>I'm <span class="typed" data-typed-items="DevOps Engineer, Cloud System Administrator"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        
+       
+          <h2>About <a href="https://w4hvagj0k2.execute-api.us-east-1.amazonaws.com/dev/resume" class="btn btn-primary">Download Resume</a></h2>
+                
+          <h3> <em>Cloud/DevOps Engineer </em></h3>
+        
+          "I am a Junior DevOps Engineer with hands-on experience in AWS services, Linux, and Python. 
+          I have a strong understanding of CI/CD processes and cloud automation, backed by a background in IT infrastructure management as a System Administrator. 
+          I specialize in leveraging cloud technologies to streamline deployments and optimize business processes. I have designed, deployed, and managed cloud infrastructures using AWS, and 
+          I am proficient in developing infrastructure as code with tools like Terraform, Ansible, and Python. 
+          Additionally, I am experienced with containerization technologies such as Docker and Kubernetes, 
+          which I have used to build and manage scalable microservices architectures and improve application deployment and orchestration."
+        </p>
+
+        <!-- <img src="assets/img/banner.jpg" alt="AWS Community Builder Badge" class="img-fluid" style="width: 365px ; height: 125px;"/>-->
+      </div>
+        
+      </div>
+      
+     </section><!-- End About Section -->
+
+    
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Key Skills</h2>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">AWS <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">DevOps<i class="val">50%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Docker<i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">SonarQube<i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">Kubernetes<i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Terraform<i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Python<i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Maven<i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        
+         <h2><Center>Work Experience</Center></h2>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+           
+            <h3 class="resume-title">ExLearn Technology - DevOps Internship</h3>
+            <h3>October - December, 2024</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> During my internship with ExLearn Technologies, I had the opportunity to immerse myself in key DevOps concepts, 
+                gaining hands-on experience in Linux, networking, the Software Development Life Cycle (SDLC), and CI/CD principles.
+                These skills empowered me to address real-world challenges effectively, including:</p>
+             
+              <ul>
+                <li>Leveraging advanced Linux skills, to solve a server hosting a critical application which repeatedly crashed due to improper process management. I identified and managed rogue processes, optimized resource allocation, and implemented automated monitoring scripts, ensuring system stability.</li>
+                <li>I applied the knowledge gain in networking protocols and firewalls to optimized an application facing letency by optimizing network routes, implemented load balancers to enhanced application performance and reliability.</li>
+                <li>I designed and implemented a CI/CD pipeline to automate build, test, and deployment processes, minimizing human errors and accelerating delivery cycles.</li>
+              </ul>
+            </div>
+
+            <!--2ND WORK EXPERIENCE-->
+
+            <h3 class="resume-title">Kolonos Bv | System Administrator  </h3>
+            <h3>2022 - Present</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> </p>
+             
+              <ul>
+                <li>Managed local area network (LAN) and configured network services (DNS, DHCP, firewalls) </li>
+                <li>Implemented data backup, recovery systems, and security patch management.</li>
+                <li>Created and managed user accounts and workstations in a networked environment.</li>
+                <li>Provided technical support and monitored system performance for continuous uptime.</li>
+              </ul>
+            </div>
+
+            <!--3RD WORK EXPERIENCE-->
+
+            <h3 class="resume-title">Charlotte Dolphyne Technical Institute | Industrial Attachment  </h3>
+            <h3>April - September, 2023</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> </p>
+                
+              
+              <ul>
+                <li>Taught Web Design(HTML, CSS & JavaScript) and C++ programming </li>
+                <li>Managed Network Configurations</li>
+                <li>Installed software, configured hardware, and provided IT support</li>
+                <li>Managed Student's Database</li>
+              </ul>
+            </div>
+
+            <!--4RD WORK EXPERIENCE-->
+
+            <h3 class="resume-title">Nation Builders Corps(NABCO) | Research & Training Officer  </h3>
+            <h3>October 2018 - September, 2021</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> </p>
+                
+              
+              <ul>
+                <li>Developing training materials, and documentation to support ongoing learning and development </li>
+                <li>Provided IT training on leveraging technology for improved productivity</li>
+                <li>Handles Trainees payment validation System</li>
+                
+              </ul>
+            </div>
+
+            <!--5th WORK EXPERIENCE-->
+
+            <h3 class="resume-title">Nation Builders Corps(NABCO) | Research & Training Officer  </h3>
+            <h3>October 2018 - September, 2021</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> </p>
+                
+              
+              <ul>
+                <li>Developing training materials, and documentation to support ongoing learning and development </li>
+                <li>Provided IT training on leveraging technology for improved productivity</li>
+                <li>Handles Trainees payment validation System</li>
+                
+              </ul>
+            </div>
+
+            <!--EDUCATION-->
+            <h2><Center>Education</Center></h2>
+            <h3 class="resume-title">Ghana Communication Technology University </h3>
+            <h3>September, 2019 - October, 2023</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> BSc. Information Technology </p>
+                
+              
+              <ul>
+                <li>Develop e-commerce website for the visually impede as project work. </li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Institute of Commercial Management (UK) </h3>
+            <h3>September, 2009 - October, 2011</h3>
+            <div class="resume-item pb-0">
+              <h4></h4>
+              <p><em> Advanced Diploma in Accounting & Finance </p>
+                
+              
+              <ul>
+                <li>The program comes with practical exercises, case studies,and real-world scenarios that helped me develop analytical and problem-solving skills. </li>
+              </ul>
+            </div>
+
+
+            <h3 class="resume-title">Certification</h3>
+            <div class="resume-item">
+              <h4>Amalitech Ghana- AWS Certified Cloud Practitioner </h4>
+              <h5>April – July,2024</h5>
+              <p><em>Amazon Web Services</em></p>
+              <ul>
+                <li>Demonstrates a strong understanding of the core AWS Cloud infrastructure, services, and benefits, enabling efficient cloud resource management and integration into DevOps workflows.</li>
+                <li>Gained knowledge of AWS security features, including identity and access management (IAM), data encryption, and compliance. </li>
+                <li>Gained Indepth knowledge in AWS services like EC2, S3, RDS, and Lambda, laying the groundwork for building automated, scalable DevOps pipelines.</li>
+                <li>Equips me with the ability to estimate AWS costs, identify cost drivers, and optimize resource usage for scalability and efficiency.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>IBM - Certificate in Cloud Computing</h4>
+              <h5>January - March, 2024</h5>
+              <p><em></em></p>
+              <li>The certification emphasizes skills in automating deployment, scaling, and testing enabling seamless integration and delivery pipelines.</li>
+                <li>Gained knowledge of AWS security features, including identity and access management (IAM), data encryption, and compliance. </li>
+                <li>The IBM Certificate provided a strong foundation in cloud concepts, infrastructure models (IaaS, PaaS, SaaS), and multi-cloud strategies, equipping me to handle diverse cloud environments effectively.</li>
+                <li>Discovered trends like Hybrid Multicloud, Microservices, Serverless computing, Cloud Native, DevOps, and Application Modernization.</li>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title"></h3>
+            <div class="resume-item">
+              <h4>Google - IT Support Certification </h4>
+              <h5>April - June, 2021</h5>
+              <p><em></em></p>
+              <ul>
+                <li>Learned essential IT topics, including networking, system administration, security, and troubleshooting, enabling me to effectively manage and resolve technical issues in various IT environments.</li>
+                <li>Provided me with insight on how to diagnose and resolve IT issues, using tools like ticketing systems and log analysis. </li>
+                <li>Learned how to automate tasks using tools like Bash scripting and basic Python programming for creating scripts to automate repetitive processes and build CI/CD pipelines.</li>
+              </ul>
+              </div>
+              <div class="resume-item">
+              <h4>University of Michigan - Python for Everybody</h4>
+              <h5>January - March, 2021</h5>
+              <p><em>Retrieving, Processing, and Visualizing Data with Python</em></p>
+              <ul>
+                <li>This course equiped me with reading and writing files, parsing data formats like JSON, and interacting with RESTful APIs.</li>
+                <li>it also teaches me how to use regular expressions to search, match, and manipulate text which is essential for log analysis, data parsing, and validation tasks, such as filtering error logs or cleaning data inputs </li>
+                
+              </ul>
+              </div>  
+              <!--
+              <div class="resume-item">
+              <h4>HashiCorp Certified: Terraform Associate</h4>
+              <h5></h5>
+              <p><em>HashiCorp</em></p>
+              <ul>
+                <li>Ability to define, provision, and manage cloud infrastructure using Terraform configurations.</li>
+                <li>Building reusable Terraform modules to standardize infrastructure configurations. </li>
+                <li>Automating infrastructure provisioning and scaling with declarative IaC.</li>
+              </ul>
+              </div>  
+              <div class="resume-item">
+              <h4>CKA: Certified Kubernetes Administrator</h4>
+              <h5></h5>
+              <p><em>The Linux Foundation</em></p>
+              <ul>
+                <li>Cluster Management: Installing, configuring, and maintaining Kubernetes clusters, ensuring high availability and reliability.</li>
+                <li>Networking and Security: Managing networking, configuring RBAC (Role-Based Access Control), and securing the cluster through best practices. </li>
+                <li>Troubleshooting: Diagnosing and resolving issues within Kubernetes environments, including workload failures, networking, and performance issues.</li>
+                <li>Automation and Scaling: Automating deployment, scaling, and management of containerized applications using Kubernetes tools and strategies. </li>
+              </ul>
+              </div>      
+            <div class="resume-item">
+              <h4>ISTQB - Certified Tester</h4>
+              <h5></h5>
+              <p><em>International Software Testing Quality Board</em></p>
+              <ul>
+                <li>Developed numerous Cloud and QA programs</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created many POCs presentations and proposals a month for clients</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    -->
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>
+            "Hands-on experience in AWS, Azure & GCP(Learning Process), developing cloud infrastructure as code using Terraform, Ansible, and Python. Skilled in containerization tools like Docker and Kubernetes. Explore my portfolio for more details"
+             
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">DevOps</li>
+              <li data-filter=".filter-card">Blog</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--DEVOPS PROJECTS-->
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/S3_BACKUP.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/S3_BACKUP.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Project 1"><i class="bx bx-plus">Automated Backup to S3</i></a>
+                <a href="https://https://shorturl.at/fTs2F" target="_blank" title="More Details"><i class="bx bx-link"></i>Github</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/PRO-03.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/PRO-03.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Project 2"><i class="bx bx-plus">Password Expiration Notification System</i></a>
+                <a href="https://shorturl.at/pfiKi" target="_blank" title="More Details"><i class="bx bx-link">Github</i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/PRO-04.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/PRO-05.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Project 3"><i class="bx bx-plus">EC2 Launch & Resource Creation with AWS CLI"</i></a>
+                <a href="https://shorturl.at/veB1H" target="_blank" title="More Details"><i class="bx bx-link">Github</i></a>
+              </div>
+            </div>
+          </div>
+
+          
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/PRO-07A.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/PRO-06A.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Project 4"><i class="bx bx-plus">AWS Lambda Versioning & Alias from the CLI</i></a>
+                <a href="https://shorturl.at/KhlOU" target="_blank" title="More Details"><i class="bx bx-link"></i>Github</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/PRO-08.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/PRO-08.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Project 5"><i class="bx bx-plus">Host Two Websites on One EC2 Instance</i></a>
+                <a href="https://shorturl.at/DPYfa" target="_blank" title="More Details"><i class="bx bx-link">Github</i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/PRO-09A.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/PRO-09B.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus">EC2 Launch & Resource Creation with AWS CLI"</i></a>
+                <a href="https://shorturl.at/rX1K0" target="_blank" title="More Details"><i class="bx bx-link">Github</i></a>
+              </div>
+            </div>
+          </div>
+
+          <!--BLOG PROJECTS-->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/PRO-01A.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/PRO-01.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Blog-1"><i class="bx bx-plus">Automating Data Security and Accessibility</i></a>
+                <a href="https://shorturl.at/7MRvK" target="_blank" title="More Details"><i class="bx bx-link">Dev.to</i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/BLOG-02.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/BLOG-02.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i>Automate backup from EC2 to S3</a>
+                <a href="https://shorturl.at/pxudq" target="_blank" title="More Details"><i class="bx bx-link"></i>Blog</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/blog-4.webp" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/blog-4.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="blog-4"><i class="bx bx-plus"></i>How to Create an SNS Alert</a>
+                <a href="https://shorturl.at/FQRqS" title="More Details"><i class="bx bx-link"></i>Medium</a>
+              </div>
+            </div>
+          </div>
+
+           <!--WEB PROJECTS-->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/web-01.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/web-01.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 1"><i class="bx bx-plus"></i>Ecommerce site</a>
+                <a href="https://dalijay.icles.tech/" title="More Details"><i class="bx bx-link"></i>DaliMart</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/web-02.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/web-02.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="https://unictouch.unaux.com" title="More Details"><i class="bx bx-link"></i>unictouch</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/web-03.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/web-03.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="https://dalijaytechhub-online.preview-domain.com/" target="_blank" title="More Details"><i class="bx bx-link"></i>Dalijay Tech </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+  <!--
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>My Cloud and DevOps services encompass designing and deploying scalable cloud infrastructure, automating CI/CD pipelines, and managing Infrastructure as Code (IaC) using tools like Terraform and Ansible. We specialize in containerization with Docker and Kubernetes, cloud security, cost optimization, and disaster recovery solutions. Additionally, we offer cloud migration, serverless development, and multi-cloud or hybrid cloud solutions tailored to your business needs.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Cloud Infrastructure Design and Deployment</a></h4>
+            <p class="description">Design and implement secure, scalable, and highly available cloud infrastructure on platforms like AWS, Azure, and GCP. Our solutions are tailored to your business needs, ensuring optimal performance and cost efficiency</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">DevOps Automation and CI/CD Pipeline Setup</a></h4>
+            <p class="description">Implement Continuous Integration and Continuous Deployment (CI/CD) pipelines using industry-leading tools like Jenkins, GitLab CI, and Azure DevOps to automate software delivery, reduce manual efforts, and ensure faster, error-free deployments</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Infrastructure as Code (IaC) Implementation</a></h4>
+            <p class="description">Develop and manage infrastructure using Terraform, Ansible, and CloudFormation. Automate the provisioning and management of cloud resources to ensure consistency, version control, and easy recovery</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Containerization and Orchestration</a></h4>
+            <p class="description">Leverage Docker and Kubernetes to containerize applications and orchestrate deployments across cloud environments. Enable faster development cycles and scalable, resilient deployments with our container management solutions</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Cloud Security and Compliance</a></h4>
+            <p class="description">Ensure your cloud infrastructure is secure and compliant with industry standards. We implement best practices in identity and access management (IAM), data encryption, and security monitoring to safeguard your environment</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+            <h4 class="title"><a href="">Monitoring, Logging, and Alerting</a></h4>
+            <p class="description">Set up robust monitoring solutions using Prometheus, Grafana, CloudWatch, and ELK stack for logging and real-time alerting. Gain actionable insights into system performance and address issues before they affect your operations</p>
+          </div>
+        </div>
+
+      </div>
+    </section> 
+    End Services Section -->
+
+    
+
+    <!-- ======= Testimonials Section ======= 
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div> End testimonial item -->
+        
+          <!--
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div> End testimonial item 
+            -->
+            <!--
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div> End testimonial item -->
+
+            <!--
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div> End testimonial item -->
+
+            <!--
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>End testimonial item
+
+        
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact me for all your DevOps Project, Web Development and Cloud architecture</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Ghana - West Africa</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>jamesblay80@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+233 542 9476 85</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+             <head>
+              <meta charset="UTF-8">
+              <title>Create Record</title>
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+              <style type="text/css">
+                  .wrapper{
+                      width: 500px;
+                      margin: 0 auto;
+                  }
+              </style>
+          </head>
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <title>Create Record</title>
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+              <style type="text/css">
+                  .wrapper{
+                      width: 500px;
+                      margin: 0 auto;
+                  }
+              </style>
+          </head>
+          <body>
+              <div class="wrapper">
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="page-header">
+                                  <h2>Contact Form</h2>
+                              </div>
+                              <p>Get in Touch.</p>
+                              <form action="https://formspree.io/f/xqakjvwr" method="post">
+                                  <div class="form-group">
+                                      <label>Name</label>
+                                      <input type="text" name="name" class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                      <label>Email</label>
+                                      <input type="email" name="email" class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                      <label>Subject</label>
+                                      <input type="subject" name="subject" class="form-control">
+                                  </div>
+                                  <div class="form-field">
+                                    <textarea
+                                      required=""
+                                      placeholder="Message"
+                                      cols="61"
+                                      rows="10"
+                                      class="input-field"
+                                    ></textarea>
+                                  </div>
+                                  <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+                              </form>
+                          </div>
+                      </div>        
+                  </div>
+              </div>
+          </body>
+          </html>
+    </section><!-- End Contact Section -->
+    
+
+  </main><!-- End #main -->
+
+<!--------- --------->  
+
+<!---------------------------------------->
+ <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+       
+      </div>
+      <div class="credits">
+
+      </div>
+      <div class="visitor-count">
+        <h4>Visitor Count: <span id="visitorCount">Loading...</span></h4>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Visitor Counter Script -->
+  <script>
+    const apiUrl = 'https://w4hvagj0k2.execute-api.us-east-1.amazonaws.com/dev'; // Replace with your actual API Gateway endpoint
+
+    // Function to handle error without showing prompt
+    function showErrorMessage(message) {
+        // Optionally show the error in the UI, or remove this function if not needed
+        console.error(message); // Logs the error message to the console
+    }
+
+    // Fetch visitor count
+    async function fetchVisitorCount() {
+        try {
+            const response = await fetch(`${apiUrl}/visitCount`);
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById('visitorCount').textContent = data.visits;
+                console.log('Visitor count fetched:', data.visits);
+            } else {
+                const error = await response.json();
+                showErrorMessage(error.message || 'Failed to fetch visitor count.');
+                console.error('Visitor count fetch error:', error);
+            }
+        } catch (err) {
+            showErrorMessage('Error occurred while fetching visitor count.');
+            console.error('Visitor count fetch failed:', err);
+        }
+    }
+
+    // Fetch the visitor count on page load
+    fetchVisitorCount();
+</script>
+
+</body>
+
+</html>

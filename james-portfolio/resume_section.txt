@@ -1,0 +1,71 @@
+/* General layout for resume sections */
+.resume-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Adds space between sections */
+  justify-content: space-between;
+}
+
+/* Column styles for Work Experience and Education/Certification */
+.work-experience,
+.education-certification {
+  flex: 1; /* Equal width for both sections */
+  min-width: 350px; /* Ensures responsiveness for smaller screens */
+  padding: 20px;
+  background: #f5f8fd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section titles */
+.resume-section h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #173b6c;
+}
+
+/* Subtitles for individual sections */
+.resume-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #149ddd;
+  margin-top: 15px;
+}
+
+/* Items inside each section */
+.resume-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-left: 3px solid #149ddd;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+/* Item headers */
+.resume-item h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #173b6c;
+}
+
+/* List styling */
+.resume-item ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.resume-item ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .resume-section {
+    flex-direction: column; /* Stacks sections vertically */
+  }
+}
