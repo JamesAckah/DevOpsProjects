@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHIZLABS</title>
+    <title>Dalijay Tech Hub</title>
     <style>
         body {
             background-color: white; /* Changed body background to white */
@@ -11,22 +11,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+            justify-content: flex-start; /* Changed to flex-start to align items at the top */
+            margin: 0; /* Ensure no margin on body */
             font-family: Arial, sans-serif;
         }
         .header {
             background-color: blue;
             color: white;
-            padding: 20px;
+            padding: 10px; /* Reduced padding for less space */
             width: 100%;
             text-align: center;
+            position: relative; /* Ensure it is positioned normally */
+            z-index: 10; /* Ensure it is above other elements */
+            margin-top: 0; /* Ensure no margin at the top */
         }
         .form-container {
             background-color: #f0f8ff; /* Light blue background color for the form */
             color: black;
-            padding: 20px 40px;
+            padding: 10px 20px; /* Reduced padding for less height */
             border-radius: 10px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
@@ -38,18 +40,21 @@
             color: white; /* Changed header font color to white */
             font-size: 3em;
             font-weight: bold;
-            margin-bottom: 50px;
+            margin: 0; /* Remove margin to reduce space */
         }
         h2 {
             margin-bottom: 20px;
         }
         input, textarea {
-            margin: 10px 0;
-            padding: 10px;
+            margin: 5px 0; /* Reduced margin for form fields */
+            padding: 8px; /* Reduced padding for form fields */
             width: 100%;
             max-width: 300px;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+        textarea {
+            height: 80px; /* Set a fixed height for the textarea */
         }
         input[type="submit"] {
             background-color: blue;
@@ -57,8 +62,8 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
-            padding: 15px 20px; /* Increased padding for better click area */
-            font-size: 18px; /* Increased font size for better readability */
+            padding: 10px 15px; /* Reduced padding for submit button */
+            font-size: 16px; /* Adjusted font size for better readability */
         }
         input[type="submit"]:hover {
             background-color: darkblue;
@@ -66,18 +71,108 @@
         .section-title {
             margin-bottom: 20px;
         }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            font-family: inherit;
+            gap: 10px;
+            padding-inline: 2em;
+            padding-bottom: 0.4em;
+            background-color: #171717;
+            border-radius: 20px;
+        }
+        
+        .form-heading {
+            text-align: center;
+            margin: 1em; /* Reduced margin for form heading */
+            color: #64ffda;
+            font-size: 1.2em;
+            background-color: transparent;
+            align-self: center;
+        }
+        
+        .form-field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            border-radius: 10px;
+            padding: 0.6em;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: #171717;
+            box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+        }
+        
+        .input-field {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: #ccd6f6;
+            padding-inline: 1em;
+        }
+        
+        .sendMessage-btn {
+            cursor: pointer;
+            margin-bottom: 3em;
+            padding: 1em;
+            border-radius: 10 
+px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #64ffda;
+            font-weight: bold;
+            outline: 1px solid #64ffda;
+            transition: all ease-in-out 0.3s;
+        }
+        
+        .sendMessage-btn:hover {
+            transition: all ease-in-out 0.3s;
+            background-color: #64ffda;
+            color: #000;
+            cursor: pointer;
+            box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+        }
+        
+        .form-card1 {
+            background-image: linear-gradient(163deg, #64ffda 0%, #64ffda 100%);
+            border-radius: 22px;
+            transition: all 0.3s;
+        }
+        
+        .form-card1:hover {
+            box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+        }
+        
+        .form-card2 {
+            border-radius: 0;
+            transition: all 0.2s;
+        }
+        
+        .form-card2:hover {
+            transform: scale(0.98);
+            border-radius: 20px;
+        }
+        
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         function submitToAPI(e) {
             e.preventDefault();
-            var URL = "<ENTER_API_INVOKE_URL_HERE>";  # API of the lambda involkation function
+            var URL = "arn:aws:execute-api:eu-north-1:872515259444:vqu5hzp3z7/*/POST/contactform";  //API of the lambda invocation function
             var name = $("#name-input").val();
             var email = $("#email-input").val();
+            
             var message = $("#message-input").val();
             var data = {
                 name: name,
                 email: email,
+                Subject: Subject,
                 message: message
             };
 
@@ -103,25 +198,35 @@
 </head>
 <body>
     <div class="header">
-        <h1>Welcome to Whizlabs</h1>
+        <h1>Welcome to Dalijay Tech Hub</h1>
     </div>
-    <div class="form-container">
-        <form id="contact-form" action="" method="post">
-            <div class="section-title">
-                <h2>Contact form <small>Let us talk!</small></h2>
-            </div>
-            <div>
-                <input type="text" id="name-input" placeholder="Enter full name" name="name" required="">
-                <br>
-                <input type="email" id="email-input" placeholder="Enter email address" name="email" required="">
-                <br>
-                <textarea id="message-input" rows="6" placeholder="Enter your query" name="message" required=""></textarea>
-                <br>
-            </div>
-            <div>
-                <input type="submit" onClick="submitToAPI(event)" name="send message" value="Send Message">
-            </div>
-        </form>
+    <div class="form-card1">
+        <div class="form-card2">
+            <form class="form" id="contact-form">
+                <p class="form-heading">Get In Touch</p>
+        
+                <div class="form-field">
+                    <input required="" id="name-input" placeholder="Name" class="input-field" type="text" />
+                </div>
+        
+                <div class="form-field">
+                    <input required="" id="email-input" placeholder="Email" class="input-field" type="email" />
+                </div>
+        
+           
+        
+                <div class="form-field">
+                    <textarea required="" id="message-input" placeholder="Message" cols="100" rows="5" class="input-field"></textarea>
+                </div>
+        
+                <div>
+                    <input type="submit" onClick="submitToAPI(event)" name="send message" value="Send Message">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
+
+
+

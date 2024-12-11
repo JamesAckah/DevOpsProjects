@@ -1,8 +1,8 @@
 var aws = require("aws-sdk");
-var ses = new aws.SES({ region: "us-east-1" });
+var ses = new aws.SES({ region: "eu-east-1" });
 
-var RECEIVER = "<ENTER_RECEIVER_MAIL_ID_HERE";
-var SENDER = "<ENTER_SENDER_MAIL_ID_HERE>";
+var RECEIVER = "awsrestart651@gmail.com";
+var SENDER = "delijaytechconsult@gmail.com";
 
 exports.handler = async function (event) {
     console.log('Received event:', JSON.stringify(event, null, 2));
@@ -29,7 +29,7 @@ exports.handler = async function (event) {
         Message: {
             Body: {
                 Text: {
-                    Data: 'Full Name: ' + body.name + '\nEmail: ' + body.email + '\nMessage: ' + body.message,
+                    Data: 'Full Name: ' + body.name + '\nEmail: ' + body.email + '\nSubject: ' + body.Subject + '\nMessage: ' + body.message,
                     Charset: 'UTF-8'
                 }
             },
