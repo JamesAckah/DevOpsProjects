@@ -1,7 +1,6 @@
-> **COMPREHENSIVE GUIDE TO DEPLOYING JAVA WEB APPLICATIONS ON [TOMCAT
-> USING MAVEN AND AWS INFRASTRUCTURE]{.underline}**
+> **COMPREHENSIVE GUIDE TO DEPLOYING JAVA WEB APPLICATIONS ON [TOMCAT USING MAVEN AND AWS INFRASTRUCTURE]{.underline}**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image1.png){width="7.394444444444445in"
+![](images/media/image1.png){width="7.394444444444445in"
 height="4.381944444444445in"}
 
 > **[PROJECT OUTLINE]{.underline}**
@@ -31,7 +30,7 @@ height="4.381944444444445in"}
 > **aws ec2 create-vpc \--cidr-block 10.1.0.0/16 \--region us-east-1
 > *Note: Save the VPC ID shown in the output. ***
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image2.png){width="6.5in"
+![](images/media/image2.png){width="6.5in"
 height="3.1416655730533685in"}
 
 2\. **Create a Subnet**\
@@ -40,7 +39,7 @@ height="3.1416655730533685in"}
 10.1.1.0/24 \--region us-** **east-1**\
 ***Note: Save the Subnet ID.***
 
-> ![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image3.png){width="6.5in"
+> ![](images/media/image3.png){width="6.5in"
 > height="2.7819444444444446in"}
 
 3\. **Create an Internet Gateway**
@@ -49,7 +48,7 @@ height="3.1416655730533685in"}
 >
 > **aws ec2 create-internet-gateway \--region us-east-1**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image4.png){width="6.5in"
+![](images/media/image4.png){width="6.5in"
 height="1.8375in"}
 
 > ***Note: Save the Internet Gateway ID***.
@@ -66,7 +65,7 @@ height="1.8375in"}
 > **aws ec2 create-route-table \--vpc-id \<Your-VPC-ID\> \--region
 > us-east-1**
 >
-> ![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image5.png){width="6.5in"
+> ![](images/media/image5.png){width="6.5in"
 > height="2.7569444444444446in"}
 >
 > ***Note: Save the Route Table ID.***
@@ -77,7 +76,7 @@ height="1.8375in"}
 > \--destination-cidr-block 0.0.0.0/0 \--gateway-id
 > \<Your-Internet-Gateway-ID\> \--region us-east-1**
 >
-> ![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image6.png){width="6.5in"
+> ![](images/media/image6.png){width="6.5in"
 > height="0.7222222222222222in"}
 
 7\. Associate the Subnet with the Route Table
@@ -85,7 +84,7 @@ height="1.8375in"}
 > **aws ec2 associate-route-table \--subnet-id \<Your-Subnet-ID\>
 > \--route-table-id \<Your-Route-Table-ID\> \--region us-east-1**
 >
-> ![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image7.png){width="6.499998906386701in"
+> ![](images/media/image7.png){width="6.499998906386701in"
 > height="0.9in"}
 
 **PART 3: CREATING AN EC2 INSTANCE**
@@ -98,7 +97,7 @@ height="1.8375in"}
 > Name\> \--description \"Description of SG\" \--vpc-id \<Your vpc id\>
 > \--region us-east-1**
 >
-> ![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image8.png){width="6.499998906386701in"
+> ![](images/media/image8.png){width="6.499998906386701in"
 > height="0.5805555555555556in"}
 >
 > ***Note: Save the Security Group ID***.
@@ -116,7 +115,7 @@ height="1.8375in"}
 >
 > ***best practices.***
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image9.png){width="6.5in"
+![](images/media/image9.png){width="6.5in"
 height="1.6138877952755906in"}
 
 3\. **Create a Key Pair**
@@ -124,7 +123,7 @@ height="1.6138877952755906in"}
 > **aws ec2 create-key-pair \--key-name \<Your Key Pair Name\> \--query
 > \'KeyMaterial\' \--region us-east-1**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image10.png){width="6.5in"
+![](images/media/image10.png){width="6.5in"
 height="0.9583333333333334in"}
 
 > Copy the output into a text editor and save it with you key pair name.
@@ -138,7 +137,7 @@ height="0.9583333333333334in"}
 >
 > **Note: For EC2 instance image id check this**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image11.png){width="6.5in"
+![](images/media/image11.png){width="6.5in"
 height="4.541666666666667in"}
 
 > ***Note: Save the Instance ID.***
@@ -147,7 +146,7 @@ height="4.541666666666667in"}
 
 > **aws ec2 allocate-address \--domain vpc \--region us-east-1**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image12.png){width="6.5in"
+![](images/media/image12.png){width="6.5in"
 height="1.733332239720035in"}
 
 6\. **Allocate an Elastic IP to the instance**.
@@ -155,7 +154,7 @@ height="1.733332239720035in"}
 > **aws ec2 associate-address \--instance-id i-07f62fa3f94ddb1bd
 > \--allocation-id \<Your id here\> \--region us-east-1**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image13.png){width="6.5in"
+![](images/media/image13.png){width="6.5in"
 height="0.6944444444444444in"}
 
 **PART 3: BUILDING THE JAVA WEB APP**
@@ -195,13 +194,13 @@ height="0.6944444444444444in"}
 >
 > **sudo tar -xvzf apache-maven-3.9.6-bin.tar.gz**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image14.png){width="7.0in"
+![](images/media/image14.png){width="7.0in"
 height="1.558332239720035in"}
 
 7\. **Remove the Zip File and Rename the Extracted File sudo rm -rf
 apache-maven-3.9.6-bin.tar.gz sudo mv apache-maven-3.9.6/ maven**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image15.png){width="7.0in"
+![](images/media/image15.png){width="7.0in"
 height="1.8472222222222223in"}
 
 8\. **Setting Up Environmental Variables for Maven** **sudo nano
@@ -212,7 +211,7 @@ height="1.8472222222222223in"}
 > **export M2_HOME=/opt/maven**\
 > **export PATH=\$PATH:\$M2_HOME/bin**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image16.png){width="7.0in"
+![](images/media/image16.png){width="7.0in"
 height="3.0458333333333334in"}
 
 9\. **Restart the .bashrc file**
@@ -292,7 +291,7 @@ lines and uncomment it as shown in the image.**
 > **\<Valve className=\"org.apache.catalina.valves.RemoteAddrValve\"**
 > **allow=\"127\\.\\d+\\.\\d+\\.\\d+\|::1\|0:0:0:0:0:0:0:1\" /\>**
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image17.png){width="7.0in"
+![](images/media/image17.png){width="7.0in"
 height="4.118055555555555in"}
 
 **- Save and exit**\
@@ -352,7 +351,7 @@ maven server, navigate to the .m2 directory\
 > **\</plugin\>**\
 > - Save and exit
 
-![](vertopal_4bc9361d0b6a41d5b548e8949074b77a/media/image18.png){width="7.0in"
+![](images/media/image18.png){width="7.0in"
 height="4.965277777777778in"}
 
 5\. Now run this command to deploy from Maven to Tomcat: **- mvn
@@ -419,3 +418,6 @@ tomcat7:deploy**\
 > crucial for business success.
 >
 > **NB: Looking forward to Junior DevOps internship opportunities.**
+
+#contact me on 
+LinkedIn: 
