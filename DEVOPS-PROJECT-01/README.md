@@ -73,7 +73,7 @@ BACKUP_SOURCE="/home/ubuntu/System_Data"
 BACKUP_DEST="/home/ubuntu/system_backup/"
 BACKUP_FILE="backup_$(date +%Y%m%d).tar.gz"
 S3_BUCKET="s3://linuxacademy-awscli-backup"
-ADMIN_EMAIL="jamesblay80@gmail.com"
+ADMIN_EMAIL="example@gmail.com"
 ```
 
 ## Dependencies
@@ -94,4 +94,4 @@ ADMIN_EMAIL="jamesblay80@gmail.com"
 
 ## Contact
 
-For questions or assistance, please contact **James Ackah-Blay** at [jamesblay80@gmail.com](mailto:jamesblay80@gmail.com).
+For comments and feedback please contact **Me** at [jamesblay80@gmail.com](mailto:jamesblay80@gmail.com).
