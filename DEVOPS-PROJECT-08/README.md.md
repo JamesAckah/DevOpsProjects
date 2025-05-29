@@ -157,7 +157,7 @@ Creating a VPC and subnet is essential when deploying an application on an EC2 i
 
 4.	Create a folder '/tmp/WordPress' and move the contents to the new folder using the commands below. 
 	mkdir -p /tmp/WordPress
-	cp -paf /tmp/WordPress_Temp/WordPress-master/* /tmp/WordPress
+	cp -a /tmp/WordPress_Temp/WordPress-master/* /tmp/WordPress
 
    **The "cp" command is used for copying files and directories. The options "-paf" help preserve file attributes, copy in 
     archive mode recursively, and force overwrite. Specifying the source as "/tmp/WordPress_Temp/WordPress-master/*" with a 
