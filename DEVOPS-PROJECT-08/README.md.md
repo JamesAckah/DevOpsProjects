@@ -169,14 +169,15 @@ Creating a VPC and subnet is essential when deploying an application on an EC2 i
 
    ```
 ### TASK 5: CONNECT TO YOUR EC2 INSTANCE VIA SSH:
-1.	To connect to your instance using the SSH client, click on this link https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
+1.	To connect to your instance using the SSH client, click on this link for guidelines
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-linux-inst-ssh.html
 
 ### TASK 6: CONFIGURE WORDPRESS FOR DEPLOYMENT:
 
 1. Create Scripts Directory:
 To set up and deploy your application revision on the target Amazon EC2 instance using CodeDeploy, create a folder and scripts in the directory ‘/tmp/WordPress’. First, create a ‘scripts’ directory inside ‘/tmp/WordPress’ for deployment tasks by following these commands: 
-	mkdir -p /tmp/WordPress/scripts #create a directory script.
-  	ls /tmp/WordPress #to see if the scripts directory was successfully created
+	mkdir -p /tmp/WordPress/scripts     #create a directory script.
+  	ls /tmp/WordPress   #to see if the scripts directory was successfully created
 
 2.	Install Dependencies:
 Create a file named ‘install_dependencies.sh’ in the directory ‘/tmp/WordPress/scripts’. This script will install Apache, MySQL, and PHP, and it will also enable MySQL support in PHP. These tools are essential for interacting with AWS services, managing code, and facilitating automated deployments. To install the required software, run the following commands:
